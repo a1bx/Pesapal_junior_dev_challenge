@@ -1,0 +1,31 @@
+{
+  "schema": {
+    "name": "Courses",
+    "columns": [
+      {
+        "name": "id",
+        "type": "INT",
+        "primaryKey": true,
+        "unique": false,
+        "nullable": false
+      },
+      {
+        "name": "title",
+        "type": "TEXT",
+        "primaryKey": false,
+        "unique": false,
+        "nullable": true
+      }
+    ]
+  },
+  "rows": [
+    {
+      "id": 101,
+      "title": "Computer Science"
+    },
+    {
+      "id": 102,
+      "title": "Mathematics"
+    }
+  ]
+}
