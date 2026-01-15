@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE = 'http://localhost:3001/api';
+const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3001/api';
 
 export const executeQuery = async (query: string) => {
     const response = await axios.post(`${API_BASE}/query`, { query });
@@ -19,5 +19,10 @@ export const getCourses = async () => {
 
 export const getEnrollments = async () => {
     const response = await axios.get(`${API_BASE}/enrollments`);
+    return response.data;
+};
+
+export const getLogs = async () => {
+    const response = await axios.get(`${API_BASE}/system/logs`);
     return response.data;
 };

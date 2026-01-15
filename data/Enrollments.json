@@ -42,6 +42,30 @@
     {
       "student_id": 3,
       "course_id": 102
+    },
+    {
+      "studentId": 101,
+      "courseId": 1
+    },
+    {
+      "studentId": 101,
+      "courseId": 1
+    },
+    {
+      "studentId": 101,
+      "courseId": 1
+    },
+    {
+      "studentId": 101,
+      "courseId": 1
+    },
+    {
+      "studentId": 101,
+      "courseId": 1
+    },
+    {
+      "student_id": 103,
+      "course_id": 1
     }
   ]
 }

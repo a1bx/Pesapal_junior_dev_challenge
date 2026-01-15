@@ -26,6 +26,11 @@
     {
       "id": 102,
       "title": "Mathematics"
+    },
+    {
+      "id": 1,
+      "title": "Database Systems",
+      "capacity": 2
     }
   ]
 }

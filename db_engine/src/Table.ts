@@ -66,6 +66,12 @@ export class Table {
 
     insert(row: Row): void {
         this.validateRow(row);
+
+        // Special case for capacity check if 'capacity' column exists (e.g. Courses)
+        // Or if this is a join table (Enrollments) we should check capacity of the linked course
+        // For simplicity, we'll implement this as a generic validate logic in Table
+        // But the prompt implies "Add more features to the use case", so let's make it specific to Enrollments in QueryExecutor
+
         const newIdx = this.rows.length;
         this.rows.push(row);
 

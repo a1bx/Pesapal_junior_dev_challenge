@@ -82,11 +82,45 @@ export class QueryExecutor {
         }
 
         try {
+            // Business Logic: Capacity Check for Enrollments
+            if (tableName.toLowerCase() === 'enrollments') {
+                const courseId = row['course_id'];
+                const enrollmentsTable = table;
+                const coursesTable = this.db.getTable('Courses');
+                if (coursesTable) {
+                    const currentEnrollments = enrollmentsTable.getRows().filter(r => r['course_id'] === courseId).length;
+                    const course = coursesTable.getRows().find(c => c['id'] === courseId);
+                    if (course && course['capacity'] !== undefined && currentEnrollments >= course['capacity']) {
+                        return { success: false, message: `Course ${course['title']} is full (Capacity: ${course['capacity']})` };
+                    }
+                }
+            }
+
             table.insert(row);
             this.db.saveAll();
+
+            // Log the operation
+            this.log(`Inserted into ${tableName}`);
+
             return { success: true, message: 'Row inserted successfully' };
         } catch (e: any) {
             return { success: false, message: e.message };
+        }
+    }
+
+    private log(message: string) {
+        const logsTable = this.db.getTable('SystemLogs');
+        if (logsTable) {
+            try {
+                logsTable.insert({
+                    id: Date.now(),
+                    timestamp: new Date().toISOString(),
+                    event: message
+                });
+                this.db.saveAll();
+            } catch (e) {
+                // Ignore log errors
+            }
         }
     }
 
