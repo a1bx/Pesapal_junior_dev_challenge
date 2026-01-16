@@ -2,9 +2,8 @@
 
 A high-performance, single-file relational database engine built from scratch with a glassmorphic "Nexus OS" inspired web interface. This project demonstrates core RDBMS concepts including SQL parsing, indexing, relational constraints, and real-time engine telemetry.
 
-![Nexus DB Dashboard](client/public/dashboard_preview.png)
 
-## 🚀 Key Features
+## Key Features
 
 - **Custom SQL Engine**: Supports `CREATE`, `INSERT`, `SELECT`, `UPDATE`, `DELETE`, and `INNER JOIN`.
 - **Relational Integrity**: Built-in enforcement for Primary Keys (PK) and Foreign Keys (FK).
@@ -16,7 +15,7 @@ A high-performance, single-file relational database engine built from scratch wi
 
 ---
 
-## 📋 Challenge Requirement Mapping
+## Challenge Requirement Mapping
 
 This project strictly follows the requirements of the "Simple RDBMS Challenge":
 
@@ -32,14 +31,14 @@ This project strictly follows the requirements of the "Simple RDBMS Challenge":
 
 ---
 
-## 🛠️ Architecture
+## Architecture
 
 - **Core Engine**: TypeScript-based RDBMS using Hash-based indexing for O(1) lookups.
 - **Persistence**: Flat-file JSON storage with atomic write-back.
 - **Backend**: Express.js server bridging the engine to the web.
 - **Frontend**: Vite + React with custom-built Nexus OS design system.
 
-## 🏁 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -85,7 +84,7 @@ npm run dev
 
 The application will be available at [http://localhost:5173](http://localhost:5173).
 
-## 🚀 Vercel Deployment
+## Vercel Deployment
 
 The frontend is ready for Vercel deployment.
 1. Connect your repository to Vercel.
@@ -95,6 +94,6 @@ The frontend is ready for Vercel deployment.
 > [!IMPORTANT]
 > Since the RDBMS uses local file storage, the **backend** should be hosted on a platform with persistent storage (like Render or Railway) rather than serverless functions.
 
-## 📄 License
+## License
 
 MIT - Developed for the Pesapal Junior Dev Challenge.
