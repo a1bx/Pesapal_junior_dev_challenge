@@ -20,23 +20,7 @@
   },
   "rows": [
     {
-      "student_id": 1,
-      "course_id": 101
-    },
-    {
-      "student_id": 1,
-      "course_id": 102
-    },
-    {
       "student_id": 2,
-      "course_id": 101
-    },
-    {
-      "student_id": 1,
-      "course_id": 101
-    },
-    {
-      "student_id": 1,
       "course_id": 101
     },
     {
