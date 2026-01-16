@@ -1,0 +1,29 @@
+{
+  "schema": {
+    "name": "SystemLogs",
+    "columns": [
+      {
+        "name": "id",
+        "type": "INT",
+        "primaryKey": true,
+        "unique": false,
+        "nullable": false
+      },
+      {
+        "name": "timestamp",
+        "type": "TEXT",
+        "primaryKey": false,
+        "unique": false,
+        "nullable": true
+      },
+      {
+        "name": "event",
+        "type": "TEXT",
+        "primaryKey": false,
+        "unique": false,
+        "nullable": true
+      }
+    ]
+  },
+  "rows": []
+}
