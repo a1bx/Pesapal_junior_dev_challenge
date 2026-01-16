@@ -14,6 +14,24 @@ A high-performance, single-file relational database engine built from scratch wi
 - **SQL Terminal**: Interactive console for direct database manipulation.
 - **REPL Interface**: Native terminal interface for low-level interaction.
 
+---
+
+## 📋 Challenge Requirement Mapping
+
+This project strictly follows the requirements of the "Simple RDBMS Challenge":
+
+| Requirement | Implementation Detail | Location |
+| :--- | :--- | :--- |
+| **Table Declaration** | Support for `CREATE TABLE` with `INT`, `TEXT`, `BOOLEAN`. | [QueryExecutor.ts](file:///home/jeremiah/projects/Pesapal_junior_dev_challenge/db_engine/src/QueryExecutor.ts#L34-L52) |
+| **CRUD Operations** | Native implementation of `INSERT`, `SELECT`, `UPDATE`, `DELETE`. | [QueryExecutor.ts](file:///home/jeremiah/projects/Pesapal_junior_dev_challenge/db_engine/src/QueryExecutor.ts#L54-L300) |
+| **Indexing** | O(1) lookups using Hash Maps for Primary/Unique keys. | [Table.ts](file:///home/jeremiah/projects/Pesapal_junior_dev_challenge/db_engine/src/Table.ts#L6-L24) |
+| **Primary & Unique Keys** | Enforced uniqueness and non-nullability constraints. | [Table.ts](file:///home/jeremiah/projects/Pesapal_junior_dev_challenge/db_engine/src/Table.ts#L26-L65) |
+| **Table Joining** | Support for `INNER JOIN` across multiple tables. | [QueryExecutor.ts](file:///home/jeremiah/projects/Pesapal_junior_dev_challenge/db_engine/src/QueryExecutor.ts#L135-L200) |
+| **Interactive REPL** | Terminal interface with `readline` and query history. | [repl.ts](file:///home/jeremiah/projects/Pesapal_junior_dev_challenge/db_engine/src/repl.ts) |
+| **Web App Demo** | Full-stack dashboard for student registration. | [App.tsx](file:///home/jeremiah/projects/Pesapal_junior_dev_challenge/client/src/App.tsx) |
+
+---
+
 ## 🛠️ Architecture
 
 - **Core Engine**: TypeScript-based RDBMS using Hash-based indexing for O(1) lookups.
