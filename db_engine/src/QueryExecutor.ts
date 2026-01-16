@@ -220,7 +220,14 @@ export class QueryExecutor {
                 if (val.startsWith("'") && val.endsWith("'")) val = val.slice(1, -1);
                 else if (!isNaN(Number(val))) val = Number(val);
 
-                rows = rows.filter(r => r[col] == val);
+                // Try to use index
+                const idx = table.getRowIndexByValue(col, val);
+                if (idx !== undefined) {
+                    const row = table.getRow(idx);
+                    rows = row ? [row] : [];
+                } else {
+                    rows = rows.filter(r => r[col] == val);
+                }
             }
         }
 
