@@ -121,6 +121,14 @@ export class Table {
         return initialCount - this.rows.length;
     }
 
+    getRowIndexByValue(column: string, value: any): number | undefined {
+        return this.indexes.get(column)?.get(value);
+    }
+
+    getRow(idx: number): Row | undefined {
+        return this.rows[idx];
+    }
+
     getRows(): Row[] {
         return this.rows;
     }
