@@ -20,32 +20,20 @@
   },
   "rows": [
     {
-      "id": 1,
-      "name": 0
-    },
-    {
       "id": 2,
       "name": 0
     },
     {
       "id": 101,
-      "name": "Alice"
+      "name": 0
     },
     {
       "id": 102,
-      "name": "Bob"
+      "name": 0
     },
     {
       "id": 103,
-      "name": "Charlie"
-    },
-    {
-      "id": 201,
-      "name": "Alice"
-    },
-    {
-      "id": 20,
-      "name": "Omutako Sihswishwi"
+      "name": 0
     }
   ]
 }
